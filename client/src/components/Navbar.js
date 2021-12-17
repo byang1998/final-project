@@ -1,7 +1,8 @@
 import React from "react";
 
-import styled from "styled-components";
-import { Button } from "../styles";
+//import styled from "styled-components";
+//import { Button } from 'react-bootstrap';
+
 
 function Navbar({ user, setUser }) {
   function handleLogoutClick() {
@@ -13,22 +14,17 @@ function Navbar({ user, setUser }) {
   }
 
   return (
-    <Wrapper>
+    <div>
  
-        <Button variant="outline" onClick={handleLogoutClick}>
+        <button onClick={handleLogoutClick}>
           Logout
-        </Button>
+        </button>
     
-    </Wrapper>
+    </div>
   );
 }
 
-const Wrapper = styled.header`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 8px;
-`;
+
 
 
 

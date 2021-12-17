@@ -1,54 +1,43 @@
 import { useState } from "react";
-import styled from "styled-components";
-import LoginForm from "../components/LoginForm";
-import SignUpForm from "../components/SignUpForm";
-import { Button } from "../styles";
+//import styled from "styled-components";
+import LoginForm from "./LoginForm";
+import SignUpForm from "./SignUpForm";
+//import { Button } from 'react-bootstrap';
 
 function Login({ onLogin }) {
   const [showLogin, setShowLogin] = useState(true);
 
   return (
-    <Wrapper>
-      <Logo>Reciplease</Logo>
-      {showLogin ? (
+    <div>
+      <h1>Reciplease</h1>
+      {showLogin ? 
         <>
           <LoginForm onLogin={onLogin} />
          
           <p>
             Don't have an account? &nbsp;
-            <Button color="secondary" onClick={() => setShowLogin(false)}>
+            <button  onClick={() => setShowLogin(false)}>
               Sign Up
-            </Button>
+            </button>
           </p>
         </>
-      ) : (
+       : 
         <>
           <SignUpForm onLogin={onLogin} />
           
           <p>
             Already have an account? &nbsp;
-            <Button color="secondary" onClick={() => setShowLogin(true)}>
+            <button variant="secondary" onClick={() => setShowLogin(true)}>
               Log In
-            </Button>
+            </button>
           </p>
         </>
-      )}
-    </Wrapper>
+      }
+    </div>
   );
 }
 
-const Logo = styled.h1`
-  font-family: "Permanent Marker", cursive;
-  font-size: 3rem;
-  color: deeppink;
-  margin: 8px 0 16px;
-`;
-
-const Wrapper = styled.section`
-  max-width: 500px;
-  margin: 40px auto;
-  padding: 16px;
-`;
 
 
 export default Login;
+

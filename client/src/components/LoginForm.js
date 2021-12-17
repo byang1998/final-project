@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import { Button, Error, Input, FormField, Label } from "../styles";
+import {  Error, Input, FormField, Label } from "../styles";
 
 function LoginForm({ onLogin }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [email, setEmail] = useState("");
+
   const [errors, setErrors] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
@@ -16,7 +16,7 @@ function LoginForm({ onLogin }) {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ username, password, email }),
+      body: JSON.stringify({ username, password }),
     }).then((r) => {
       setIsLoading(false);
       if (r.ok) {
@@ -28,48 +28,44 @@ function LoginForm({ onLogin }) {
   }
 
   return (
+    <div>
+      
     <form onSubmit={handleSubmit}>
-      <FormField>
-        <Label htmlFor="username">Username</Label>
-        <Input
+    
+        <label htmlFor="username">Username</label>
+        <input
           type="text"
           id="username"
           autoComplete="off"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
         />
-      </FormField>
-      <FormField>
-        <Label htmlFor="password">Password</Label>
-        <Input
+     
+
+        <label htmlFor="password">Password</label>
+        <input
           type="password"
           id="password"
           autoComplete="current-password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-      </FormField>
-      <FormField>
-      <Label htmlFor="password">Email</Label>
-        <Input
-          type="email"
-          id="email"
-          autoComplete="off"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          />
-       </FormField>
-      <FormField>
-        <Button variant="fill" color="primary" type="submit">
+  
+
+      
+
+        <button color="primary" type="submit">
           {isLoading ? "Loading..." : "Login"}
-        </Button>
-      </FormField>
-      <FormField>
+        </button>
+
+
         {errors.map((err) => (
-          <Error key={err}>{err}</Error>
+          <div key={err}>{err}</div>
         ))}
-      </FormField>
+
+      
     </form>
+    </div>
   );
 }
 
