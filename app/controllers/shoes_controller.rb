@@ -38,7 +38,7 @@ class ShoesController < ApplicationController
     private
 
     def shoe_params
-        params.permit(:title, :image, :desc, :price)
+        params.permit(:title, :image, :desc, :price, :rating)
     end
 
 end
