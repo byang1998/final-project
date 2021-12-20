@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
   
+  
+  resources :shoetimes, only: [:index, :show, :create, :destroy]
+  resources :shoes, only: [:index, :show, :create, :update, :destroy]
+  resources :users, only: [:index, :show, :create]
+
+  
   post "/signup", to: "users#create"
   get "/me", to: "users#show"
   post "/login", to: "sessions#create"

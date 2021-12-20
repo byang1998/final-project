@@ -1,33 +1,25 @@
 import React from "react";
 
-//import styled from "styled-components";
-//import { Button } from 'react-bootstrap';
+import Search from "./Search";
+import {Link} from "react-router-dom";
 
+function NavBar({setSearchShoe}) {
 
-function Navbar({ user, setUser }) {
-  function handleLogoutClick() {
-    fetch("/logout", { method: "DELETE" }).then((r) => {
-      if (r.ok) {
-        setUser(null);
-      }
-    });
-  }
+// function NavBar({setShoeList, fullShoeList}) {
+  
 
-  return (
-    <div>
- 
-        <button onClick={handleLogoutClick}>
-          Logout
-        </button>
-    
-    </div>
-  );
+    return (
+        <div class="NavBar">
+        <Link to="/shoelist">
+        <h3 className="Nav-item">Shoelist</h3>
+        </Link>
+        <Link to="/shoes/new">
+        <h3 className="Nav-item">New Shoe</h3>
+        </Link>
+        <Search setSearchShoe={setSearchShoe} />
+        {/* <Search setShoeList={setShoeList} fullShoeList={fullShoeList}/> */}
+        </div>
+    )
 }
 
-
-
-
-
-
-
-export default Navbar;
+export default NavBar;
