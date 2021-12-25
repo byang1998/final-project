@@ -5,7 +5,7 @@ import {Link} from "react-router-dom";
 
 // function NavBar({setSearchShoe}) {
 
-function NavBar({shoeList, fullShoeList, setShoeList}) {
+function NavBar({handleSearch, shoeList, fullShoeList, setShoeList}) {
   
 
     return (
@@ -17,9 +17,15 @@ function NavBar({shoeList, fullShoeList, setShoeList}) {
         <h3 className="Nav-item">New Shoe</h3>
         </Link>
         {/* <Search setSearchShoe={setSearchShoe} /> */}
-        <Search shoeList={shoeList} fullShoeList={fullShoeList} setShoeList={setShoeList}/>
+        <Search handleSearch={handleSearch} shoeList={shoeList} fullShoeList={fullShoeList} setShoeList={setShoeList}/>
+
+        <Link to="/map">
+        <h3 className="Nav-item">Map</h3>
+        </Link>
         </div>
     )
 }
+
+
 
 export default NavBar;

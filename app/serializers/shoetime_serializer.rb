@@ -1,5 +1,5 @@
 class ShoetimeSerializer < ActiveModel::Serializer
-  attributes :id, :shoetime
+  attributes :id
   has_one :user
   has_one :shoe
 end

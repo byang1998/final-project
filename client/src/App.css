@@ -2,9 +2,94 @@
   text-align: center;
 }
 
+.NavBar {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 5px;
+  background-color: lightblue;
+  color: #355070;
+}
+
+.Header {
+  padding: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: Yellow;
+  color: Red;
+}
+
+
+.Header-title {
+  text-decoration: none;
+  color: red;
+}
+
+.MainPage {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; 
+  margin: 10px auto;
+  padding-left: 10px;
+  justify-content: center 
+
+}
+
+.Shoebox {
+  display: flex;
+  flex-direction: column;
+  font-family: "Times New Roman", Times, serif;
+  width: 250px;
+  height: 350px;
+  margin: 15px;
+  padding: 25px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1), 0 0 40px rgba(0, 0, 0, 0.12);
+  border-radius: 5px;
+  color: black;
+  
+}
+
+.AddShoe {
+  
+  margin: auto;
+  padding-top: 25px;
+}
+
+.AddShoe-btn {
+  padding-top: 25px;
+}
+
+.AddShoe-input {
+  padding-top: 10px;
+}
+
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+.collecctionlist {
+  padding-top: 25px;
+}
+
+.collectionlistCards {
+  display: flex;
+  flex-direction: column;
+  font-family:"Roboto", sans-serif;
+  width: 250px;
+  height: 350px;
+  margin: 15px;
+  padding: 25px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1), 0 0 40px rgba(0, 0, 0, 0.12);
+  border-radius: 5px;
+  color: black;
+  
 }
 
 @media (prefers-reduced-motion: no-preference) {

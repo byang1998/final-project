@@ -1,15 +1,15 @@
 import {useState, useEffect} from 'react'; 
 
-function ShoeDetails({shoe}){
+function ShoeDetails({user, shoe, setCollectionlist}){
 
 
    // const imageUrl = shoe.image2 ? shoe.image2 : shoe.image;
  
     
-
+   
  function handleLikes(e) {  
    e.preventDefault()
-     fetch(`http://localhost:3000/shoes/${shoe.id}`, {
+     fetch(`/shoes/${shoe.id}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
@@ -22,14 +22,19 @@ function ShoeDetails({shoe}){
 
   function handleShoelist() {
     const shoeId = {
-      shoe_id: shoe.id
+      shoe_id: shoe.id,
+      user_id: user.id
     }
-    fetch('http://localhost:3000/shoetimes', {
+    fetch("/shoetimes", {
       headers: {"Content-Type": "application/json"},
       method: "POST",
       body: JSON.stringify(shoeId)
-  })
+    })
+    .then(res => res.json())
+    .then(data => setCollectionlist (prev => [data, ...prev]));
   }
+
+  
 
 
     return(

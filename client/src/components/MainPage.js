@@ -2,12 +2,12 @@ import React from "react";
 import ShoeCards from "./ShoeCards";
 
 
-function MainPage({shoeList, setSelectedShoe}) {
+function MainPage({ shoeList, setSelectedShoe}) {
 
 
     
     return (
-        <div class="MainDisplay">
+        <div class="MainPage">
               
               
         {shoeList.map((shoes) => <ShoeCards key={shoes.id} shoe={shoes} setSelectedShoe={setSelectedShoe}/>)}
