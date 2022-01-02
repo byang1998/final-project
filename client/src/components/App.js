@@ -22,13 +22,24 @@ function App() {
        const [collectionlist, setCollectionlist] = useState([])
 
    
-    const handleSearch = (userinput) => setSearchShoe(userinput)
+    // const handleSearch = (userinput) => setSearchShoe(userinput)
     
-    const searchResults = () => {
-        if (searchShoe.length > 0 ) {
-            return shoeList.filter((shoe)=> shoe.title.toLowerCase().includes(searchShoe.toLowerCase()))
-        } else {return shoeList}
+    // const searchResults = () => {
+    //     if (searchShoe.length > 0 ) {
+    //         return shoeList.filter((shoe)=> shoe.title.toLowerCase().includes(searchShoe.toLowerCase()))
+    //     } else {return shoeList}
         
+    // }
+
+    function handleSearch(userinput) {
+        if (userinput.length > 0) {
+            const newShoeList = shoeList.filter((shoe)=> shoe.title.toLowerCase().includes(userinput.toLowerCase()))
+            setShoeList(newShoeList)
+        }
+        else {
+            setShoeList(fullShoeList)
+        }
+
     }
 
 
@@ -60,7 +71,9 @@ function App() {
     // auto-login
     fetch("/shoes").then((r) => {
       if (r.ok) {
-        r.json().then((data) => setShoeList(data));
+        r.json().then((data) => {
+            setFullShoeList(data)
+            setShoeList(data)});
       }
     });
   }, []);
@@ -93,7 +106,7 @@ function App() {
       <NavBar shoeList={shoeList} fullShoeList={fullShoeList} setShoeList={setShoeList} handleSearch={handleSearch} />  
       <Routes>
         <Route path="/shoes" element={selectedShoe ? <ShoeDetails user={user}  setCollectionlist={setCollectionlist} shoe={selectedShoe}/> : null} />
-        <Route path="/" element={<MainPage shoeList={searchResults()} setSelectedShoe={setSelectedShoe}/>} />
+        <Route path="/" element={<MainPage shoeList={shoeList} setSelectedShoe={setSelectedShoe}/>} />
         <Route path="/shoes/new" element={<AddShoe addNewShoe={addNewShoe} />} />
         <Route path="/shoelist" element= {loggedIn === true ? <ShoeList /> : <NoShoelist />}/>
         <Route path="/map" element= {loggedIn === true ? <Map/>  : null}/>

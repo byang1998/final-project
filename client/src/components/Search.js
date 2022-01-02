@@ -1,19 +1,23 @@
 import { useState} from 'react';
 function Search({handleSearch, shoeList, fullShoeList, setShoeList}) {
     const[form, setForm] = useState("")
-    const handleForm = (e) => setForm(e.target.value)
+    const handleForm = (e) => {
+        // setForm(e.target.value)
+   
+        handleSearch(e.target.value)
+    }
     
     
     function setSearchKeyWord(e) {
        e.preventDefault();
        handleSearch(form)
       }
-      
+    
       
 
     return (
         <div className="Search">
-            <form onSubmit={setSearchKeyWord}>
+            {/* <form onSubmit={setSearchKeyWord}> */}
           <input
             class="form-control"
             type="text"
@@ -22,7 +26,7 @@ function Search({handleSearch, shoeList, fullShoeList, setShoeList}) {
             onChange = {handleForm}
            
           />
-          </form>
+          {/* </form> */}
 
         </div>
     )
