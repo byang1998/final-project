@@ -4,16 +4,22 @@ import {Link} from "react-router-dom";
 function ShoeCards({shoe, setSelectedShoe}) {
     
     return (
-        <Link to="/shoes">
+  
         <div className="Shoebox" onClick={() => setSelectedShoe(shoe)}>
             <img src={shoe.image} alt={shoe.title} width= "200px" height= "115px" />  
-            <div className="Card-txt">   
+
+            <div className="Card-txt">  
+            <Link to="/shoes"> 
             <h3>{shoe.title}</h3>
-            <p className="text-muted">{shoe.desc}</p> 
-            <p className="text-muted">Likes: {shoe.rating}</p>  
+            </Link>
+            {/* <p className="text-muted">{shoe.desc}</p>  */}
+           <br></br>
+            <p className="text-muted">Likes: {shoe.rating}</p> 
+            <br></br>
+            <h3>${shoe.price}</h3>  
             </div>
         </div>
-        </Link>
+      
     )
 }
 

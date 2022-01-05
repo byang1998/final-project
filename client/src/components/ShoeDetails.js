@@ -42,7 +42,7 @@ function ShoeDetails({user, shoe, setCollectionlist}){
             <h3>{shoe.title}</h3>
             <img src={shoe.image} style={{width:"700px"}} alt= {shoe.title}/>
             <br></br>
-            <h5>{shoe.price}</h5>
+            <h1>${shoe.price}</h1>
             <button className="btn btn-primary Detail-btn" onClick={handleLikes}>Add a Like</button>
             <button className="btn btn-primary Detail-btn" onClick={handleShoelist}>Add to Shoelist</button>
             <p>{shoe.desc}</p>

@@ -1,18 +1,56 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
 .App {
   text-align: center;
 }
 
+a {
+  text-decoration: none;
+  /* transition: 0.5s ease-in-out; */
+}
+
+.form-control {
+  padding: 3px 5px;
+}
+
+
+
 .NavBar {
   display: flex;
   align-items: center;
-  flex-direction: row;
   justify-content: space-between;
   padding-left: 15px;
   padding-right: 15px;
   padding-top: 5px;
-  background-color: lightblue;
   color: #355070;
+  background-image: linear-gradient(260deg, #000000 0%, #000000 100%);
+
+  
 }
+
+.Navlinks {
+  display: flex;
+}
+
+.Nav-item {
+  margin: 0.5rem;
+  padding: 0.5rem;
+  color: white;
+  font-size: 1.25rem;
+  transition: 0.2s ease-in-out;
+
+}
+
+.Nav-item:hover {
+  color:red;
+}
+
+
 
 .Header {
   padding: 15px;
@@ -20,14 +58,19 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background-color: Yellow;
-  color: Red;
+  background-color: white;
+  /* color: Red; */
+ 
 }
 
+h1{
+  font-family: Bradley Hand, cursive;
+}
 
 .Header-title {
   text-decoration: none;
-  color: red;
+  color: black;
+  font-family: Bradley Hand, cursive;
 }
 
 .MainPage {
@@ -40,10 +83,11 @@
 
 }
 
+
 .Shoebox {
   display: flex;
   flex-direction: column;
-  font-family: "Times New Roman", Times, serif;
+  font-family: Comic Sans MS, Comic Sans, cursive;
   width: 250px;
   height: 350px;
   margin: 15px;
@@ -52,7 +96,13 @@
   border-radius: 5px;
   color: black;
   
+  
+  text-align: left;
 }
+
+.Shoebox:hover {
+  transform : translateY(-3px);
+  }
 
 .AddShoe {
   
@@ -74,14 +124,14 @@
   pointer-events: none;
 }
 
-.collecctionlist {
+.collectionlist {
   padding-top: 25px;
 }
 
 .collectionlistCards {
   display: flex;
   flex-direction: column;
-  font-family:"Roboto", sans-serif;
+  font-family: Comic Sans MS, Comic Sans, cursive;
   width: 250px;
   height: 350px;
   margin: 15px;
@@ -89,7 +139,18 @@
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1), 0 0 40px rgba(0, 0, 0, 0.12);
   border-radius: 5px;
   color: black;
-  
+  justify-self: center;
+  row-gap: 1rem;
+}
+
+.Details{
+  font-family: Comic Sans MS, Comic Sans, cursive;
+}
+
+.cardcontainer{
+  display: grid;
+ 
+  grid-template-columns: repeat(4,1fr);
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -109,6 +170,57 @@
   color: white;
 }
 
+form {
+  width: 800px;
+  height: 550px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* position: relative; */
+ }
+
+ input {
+  width: 375px;
+  height: 25px;
+ }
+
+ .buttonsimple{
+  color: #fff !important;
+	text-transform: uppercase;
+	text-decoration: none;
+	background: #60a3bc;
+	padding: 20px;
+	border-radius: 50px;
+	display: inline-block;
+	border: none;
+	transition: all 0.4s ease 0s;
+  cursor: pointer;
+ }
+
+
+
+.text-muted {
+  font-family: Comic Sans MS, Comic Sans, cursive;
+  color: rgb(0, 0, 0);
+  font-weight: 500;
+  font-size: 14px;
+  text-transform: uppercase;
+  hyphens: auto;
+  line-height: 18px;
+  margin: 0px;
+  overflow: hidden;
+  overflow-wrap: break-word;
+  min-width: 2em;
+  
+}
+
+.collectionlistCards{
+  text-align: left;
+}
+
+
 .App-link {
   color: #61dafb;
 }
@@ -120,4 +232,21 @@
   to {
     transform: rotate(360deg);
   }
+
+
+}
+
+.loginfield {
+  margin: 1rem;
+}
+
+label {
+  margin-right: 1rem;
+}
+
+.loginbutton {    
+  padding: 1rem;
+  margin: 1rem;
+  font-size: 1.25rem;
+  width: 30%;
 }

@@ -20,7 +20,8 @@ function LoginForm({ onLogin }) {
     }).then((r) => {
       setIsLoading(false);
       if (r.ok) {
-        r.json().then((user) => onLogin(user));
+        r.json().then((user) => onLogin(user))
+        .then(()=>window.location.reload())
       } else {
         //r.json().then((err) => console.log(err));
         r.json().then((err) => setErrors(err.errors));
@@ -32,7 +33,7 @@ function LoginForm({ onLogin }) {
     <div>
       
     <form onSubmit={handleSubmit}>
-    
+        <div className="loginfield">
         <label htmlFor="username">Username</label>
         <input
           type="text"
@@ -41,8 +42,9 @@ function LoginForm({ onLogin }) {
           value={username}
           onChange={(e) => setUsername(e.target.value)}
         />
-     
+      </div>
 
+      <div className="loginfield">
         <label htmlFor="password">Password</label>
         <input
           type="password"
@@ -51,11 +53,11 @@ function LoginForm({ onLogin }) {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-  
+         </div>
 
       
 
-        <button color="primary" type="submit">
+        <button className="loginbutton" type="submit">
           {isLoading ? "Loading..." : "Login"}
         </button>
 

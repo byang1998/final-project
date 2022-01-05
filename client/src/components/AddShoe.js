@@ -36,7 +36,7 @@ function AddShoe({addNewShoe}) {
 
     return (
         <div className="AddShoe">
-            <h3>Want To Add A New Shoe?</h3>
+            <h1>Want To Add A New Shoe?</h1>
          <form className="col-auto" onSubmit={handleSubmit}>
              <div className="col-auto">
             <input className="col-sm-4 col-form-label" value= {title} onChange={(e) => setTitle(e.target.value)}type="text" name="title" placeholder="Shoe Title" />

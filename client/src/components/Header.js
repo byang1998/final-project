@@ -19,10 +19,13 @@ function Header({ user, setUser, setShoeList, fullShoeList }) {
     <div className="Header">
 
       <Link to="/">
-        <h2 className="Header-title">Foot Wear</h2>
+      <img id="footwearLogo" src="https://s.tmimgcdn.com/scr/800x500/188800/footwear-logo-concept-for-man-shoes_188880-original.jpg" alt="logo" width = "300" height = "120"/>
       </Link>
-
-        <button onClick={handleLogoutClick}>
+      <span>
+      
+      <h1 className="Header-title">Foot Wear</h1>
+      </span>
+        <button class="buttonsimple" onClick={handleLogoutClick}>
           Logout
         </button>
     

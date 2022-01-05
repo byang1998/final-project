@@ -16,12 +16,13 @@ function ShoeList() {
       return (
    
         <div className="collectionlist">
-            <h3>My Collectionlist</h3>
+            <h1>My Collectionlist</h1>
+            <div className="cardcontainer">
           {
               collectionlist.map((collectionlist) => <ShoeListCards key={collectionlist.id} shoes={collectionlist.shoe} />)
           }
 
-            
+             </div>
         </div>
     )
 }
