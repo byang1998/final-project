@@ -38,23 +38,23 @@ function AddShoe({addNewShoe}) {
         <div className="AddShoe">
             <h1>Want To Add A New Shoe?</h1>
          <form className="col-auto" onSubmit={handleSubmit}>
-             <div className="col-auto">
-            <input className="col-sm-4 col-form-label" value= {title} onChange={(e) => setTitle(e.target.value)}type="text" name="title" placeholder="Shoe Title" />
-            </div>
-            <div className="col-auto AddShoe-input">
-            <input className="col-sm-4 col-form-label" value= {image} onChange={(e) => setImage(e.target.value)}type="text" name="image" placeholder="Image URL" />
-            </div>
-            <div className="col-auto AddShoe-input">
-            <input className="col-sm-4 col-form-label" value= {desc} onChange={(e) => setDesc(e.target.value)} type="text" name="description" placeholder="Shoe Description" />
-            </div>
-            <div className="col-auto AddShoe-input">
-            <input className="col-sm-4 col-form-label" value= {rating} onChange={(e) => setRating(e.target.value)} type="text" name="rating" placeholder="Rating" />
-            </div>
-            <div className="col-auto AddShoe-input">
-            <input className="col-sm-4 col-form-label" value= {price} onChange={(e) => setPrice(e.target.value)} type="text" name="price" placeholder="price" />
-            </div>
-            <div className="AddShoe-btn">
-            <button className="btn btn-primary" type="submit">Submit Shoe</button>
+             <div className="formaddname">
+            <input className="criteria" value= {title} onChange={(e) => setTitle(e.target.value)}type="text" name="title" placeholder="Shoe Title" />
+            {/* </div>
+            <div className="col-auto AddShoe-input"> */}
+            <input className="criteria" value= {image} onChange={(e) => setImage(e.target.value)}type="text" name="image" placeholder="Image URL" />
+            {/* </div>
+            <div className="col-auto AddShoe-input"> */}
+            <input className="criteria" value= {desc} onChange={(e) => setDesc(e.target.value)} type="text" name="description" placeholder="Shoe Description" />
+            {/* </div>
+            <div className="col-auto AddShoe-input"> */}
+            <input className="criteria" value= {rating} onChange={(e) => setRating(e.target.value)} type="text" name="rating" placeholder="Rating" />
+            {/* </div>
+            <div className="col-auto AddShoe-input"> */}
+            <input className="criteria" value= {price} onChange={(e) => setPrice(e.target.value)} type="text" name="price" placeholder="price" />
+            {/* </div>
+            <div className="AddShoe-btn"> */}
+            <button className="btn-primary" type="submit">Submit Shoe</button>
             </div>
         </form>
 

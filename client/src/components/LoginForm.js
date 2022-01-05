@@ -42,9 +42,7 @@ function LoginForm({ onLogin }) {
           value={username}
           onChange={(e) => setUsername(e.target.value)}
         />
-      </div>
-
-      <div className="loginfield">
+   
         <label htmlFor="password">Password</label>
         <input
           type="password"
@@ -53,7 +51,7 @@ function LoginForm({ onLogin }) {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-         </div>
+        
 
       
 
@@ -66,7 +64,7 @@ function LoginForm({ onLogin }) {
           <div key={err}>{err}</div>
         ))}
 
-      
+    </div>
     </form>
     </div>
   );

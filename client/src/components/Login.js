@@ -9,14 +9,16 @@ function Login({ onLogin }) {
 
   return (
     <div>
+        
       <h1>Foot Wear</h1>
+      <img id="footwearLogo" src="https://s.tmimgcdn.com/scr/800x500/188800/footwear-logo-concept-for-man-shoes_188880-original.jpg" alt="logo" width = "330" height = "250"/>
       {showLogin ? 
         <>
           <LoginForm onLogin={onLogin} />
          
           <p>
             Don't have an account? &nbsp;
-            <button  onClick={() => setShowLogin(false)}>
+            <button className="signupbutton" onClick={() => setShowLogin(false)}>
               Sign Up
             </button>
           </p>
@@ -27,7 +29,7 @@ function Login({ onLogin }) {
           
           <p>
             Already have an account? &nbsp;
-            <button variant="secondary" onClick={() => setShowLogin(true)}>
+            <button className="loginbutton" onClick={() => setShowLogin(true)}>
               Log In
             </button>
           </p>
