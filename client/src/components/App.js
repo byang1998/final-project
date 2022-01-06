@@ -15,11 +15,11 @@ import Map from "./Map";
 function App() {
     const [shoeList, setShoeList] = useState([])
     const [selectedShoe, setSelectedShoe] = useState([])
-       const [user, setUser] = useState(null);
-       const [loggedIn, setLoggedIn] = useState(true)
-       const [searchShoe, setSearchShoe] = useState("")
-       const [fullShoeList, setFullShoeList] = useState([])
-       const [collectionlist, setCollectionlist] = useState([])
+    const [user, setUser] = useState(null);
+    const [loggedIn, setLoggedIn] = useState(true)
+    const [searchShoe, setSearchShoe] = useState("")
+    const [fullShoeList, setFullShoeList] = useState([])
+    const [collectionlist, setCollectionlist] = useState([])
 
    
     // const handleSearch = (userinput) => setSearchShoe(userinput)

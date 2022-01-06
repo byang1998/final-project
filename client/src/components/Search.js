@@ -18,6 +18,7 @@ function Search({handleSearch, shoeList, fullShoeList, setShoeList}) {
     return (
         <div className="Search">
             {/* <form onSubmit={setSearchKeyWord}> */}
+        <img className="imageicon" src="https://clipground.com/images/search-icon-white-png-7.png"></img>
           <input
             class="form-control"
             type="text"
