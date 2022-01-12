@@ -1,5 +1,5 @@
 # FootWear
-Welcome to my FootWear. This app will allow you to register an account and add your favorite Jordan sneakers to your collection list. The app also lets users upload Jordan Sneakers to the app that they do not see in the main page. You will also be able to view different shoe store locations in New York City.
+Welcome to FootWear. This app will allow you to register an account and add your favorite Jordan sneakers to your collection list. The app also lets users upload Jordan Sneakers to the app that they do not see in the main page. You will also be able to view different shoe store locations in New York City.
 
 # Demo
 [Click here for the demo!][create demo]
